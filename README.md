@@ -1,3 +1,31 @@
+## How to Start
+Execute the following code to start:
+```sh
+./vendor/bin/sail up
+```
+
+When developing applications using Sail, you may execute Artisan, NPM, and Composer commands via the Sail CLI instead of invoking them directly:
+```sh
+./vendor/bin/sail php --version
+./vendor/bin/sail artisan --version
+./vendor/bin/sail composer --version
+./vendor/bin/sail npm --version
+```
+
+Once the application's Docker containers have been started, you can access the application in your web browser at: [http://localhost](http://localhost).
+
+Any changes we make to our JavaScript templates will be automatically reloaded in the browser whenever the Vite development server is running via `npm run dev`.
+
+To display the Chirps in your database in your console, start a new tinker session:
+```sh
+php artisan tinker
+```
+Next, execute the following code:
+```sh
+Chirp::all();
+```
+You may exit Tinker by using the `exit` command, or by pressing Ctrl + c.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
